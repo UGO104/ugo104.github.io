@@ -1,0 +1,5 @@
+.header-right-main, .header-left-main{
+    display: block;
+    width:100%;
+    background: blue;
+}

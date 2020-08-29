@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width: 850px) and (min-width: 450px)" href="css/style_850.css" />
+    <link rel="stylesheet" media="screen and (max-width: 450px)" href="css/style_450.css" />
+    <link rel="stylesheet" media="screen and (min-width: 850px)" href="css/style.css" />
     <script src="js/searchMeal.js"></script>
     <title>Recipe generator</title>
   </head>
@@ -11,16 +13,16 @@
   <body>
     <header >
         <div class='header-main'>
-            <div id='header-left-main'>
+            <div class='header-left-main'>
                 <div class='title-container'>
                     <img src="myLogo_2.png" class="page-icon" width="90px" height="70px" alt="profile icon" />
                     <span class='page-title'> GreatRecipe.com </span>
                 </div>
                 
             </div>
-            <div class='header-right-main'>
+            <div class='header-right-main' id='header-right-main-id'>
                 <form class='searchForm'>
-                    <input type='text' id="searchbox" placeholder="Search Meal..." >
+                    <input type='text' id="searchbox" value = 'Salad' placeholder="Search Meal..." autocorrect="off">
                     <input type='submit' id='searchBtn' value='Get Recipe'>
                 </form>
             </div>
@@ -36,14 +38,16 @@
             </p>
         </div>
         <div class='right'>
-            <img src="myImage.png" width="450px" height="220px" alt="profile image" />
+            <img src="myImage.png" alt="profile image" />
         </div>
     </section>
 
     <section class='section-two' id='section-2'> </section>
 
     <footer>
-        <span > All rights reserved @adetutu</span>
+        <div class='footer-main'> 
+            All rights reserved @adetutu
+        </div>
     </footer>
   </body>
 

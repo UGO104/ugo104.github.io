@@ -1,0 +1,151 @@
+@font-face {
+    font-family: Arvo; 
+    src: url('arvo/arvo-regular.ttf');
+}
+
+*{  
+    overflow-x: hidden;
+    font-family: Arvo;
+    padding: 0;
+    margin: 0;
+}
+
+.sticky {
+    position:fixed;
+    width: 100%;
+    top: 0;
+}
+
+.footer-main{
+    margin: auto;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: lightgrey;
+}
+
+.header-main{
+    width:100%;
+    background: whitesmoke;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-right-main, .header-left-main{
+    display: block;
+}
+
+.page-icon{
+    display: none;
+}
+
+.page-title{
+    display:block;
+    font-size:25px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.searchForm{
+    width: 100%;
+}
+
+.searchForm input{
+    margin: 2px auto;
+    display: block;
+    width: 95%;
+}
+
+.searchForm input[type='submit']{
+    color: white;
+    padding:10px 0;
+    background: DodgerBlue;
+    font-weight: bold;
+    border: 1px solid grey;
+}
+.searchForm input[type='text']{
+    padding: 15px 0;
+    font-size: 14px;
+    text-indent: 10px;
+    outline: none !important;
+    border:1px solid lightgrey;
+}
+
+.searchForm input[type='text']:focus {
+    border:1px solid blue;
+}
+
+.section-one{
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    flex-flow: column-reverse wrap;
+}
+
+.section-one .left{
+    padding-top: 10px;
+}
+
+.section-one .left p{
+    margin: auto;
+    padding: 40px 0;
+    font-size: 18spx;
+    text-align: center;
+    white-space: wrap;
+    overflow: hidden;
+    background: whitesmoke;
+
+}
+
+.section-one .right {
+    padding-top: 50px;
+}
+
+.section-one .right > img {
+    width: 320px;
+    height: 250px;
+    margin: auto;
+    display: block;
+}
+
+.section-two{
+    padding: 10px;
+}
+
+.section-two .recipe-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    padding:10px;    
+}
+
+
+.section-two .recipe-container .right img{
+    width: 95%;
+    height: 320px;
+    margin: auto;
+    display: block;
+}
+
+.section-two .recipe-container .right .r-title{
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    color: grey;
+}
+
+.section-two .recipe-container .right .m-view-recipe{
+    width:95%;
+    color: navy;
+    display: block;
+    padding:15px 0;
+    margin: 5px auto;
+    font-weight: bold;
+    background: whitesmoke;
+    border: 1px solid lightgrey;
+
+}
+
+.section-two .recipe-container .left{
+    display: none;
+}
