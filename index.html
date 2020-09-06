@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" media="screen and (max-width: 850px) and (min-width: 450px)" href="css/style_850.css" />
-    <link rel="stylesheet" media="screen and (max-width: 450px)" href="css/style_450.css" />
-    <link rel="stylesheet" media="screen and (min-width: 850px)" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (max-width: 1024px) and (min-width: 481px)" href="css/style_850.css" />
+    <link rel="stylesheet" media="screen and (max-width: 480px)" href="css/style_450.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1025px)" href="css/style.css" />
     <script src="js/searchMeal.js"></script>
     <title>Recipe generator</title>
   </head>
@@ -22,8 +23,8 @@
             </div>
             <div class='header-right-main' id='header-right-main-id'>
                 <form class='searchForm'>
-                    <input type='text' id="searchbox" value = 'Salad' placeholder="Search Meal..." autocorrect="off">
-                    <input type='submit' id='searchBtn' value='Get Recipe'>
+                    <input type='text' id="searchbox" value = 'Salad' placeholder="Search Meal..." />
+                    <input type='submit' id='searchBtn' value='Get Recipe' />
                 </form>
             </div>
         </div>
@@ -37,16 +38,23 @@
                 Good food, Good healthy <br>
             </p>
         </div>
-        <div class='right'>
-            <img src="myImage.png" alt="profile image" />
-        </div>
     </section>
 
     <section class='section-two' id='section-2'> </section>
 
-    <footer>
-        <div class='footer-main'> 
-            All rights reserved @adetutu
+    <footer class='footer-main'>
+
+        <span style=''>
+            Follow us on : 
+        </span>
+
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-instagram"></a>
+
+        <div class='at-copy-right'> 
+            Copyright &copy; <script>document.write(new Date().getFullYear())</script> GreatRecipe. All rights reserved.
         </div>
     </footer>
   </body>

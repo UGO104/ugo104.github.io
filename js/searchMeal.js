@@ -14,7 +14,9 @@ window.onload = function() {
         // get searchBox value  
         var mySearch = searchBox.value; 
         // check if search-box is empty
-        if( mySearch.trim().length === 0 ) e.stopPropagation( ); 
+        if( mySearch.trim().length === 0 ){ 
+            if( e !== undefined ) e.stopPropagation( );
+        } 
         // Look-up item using Fetch( ) api
         else
             fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${mySearch}`, { mode: 'cors'} )
@@ -52,27 +54,36 @@ window.onload = function() {
 
             data.meals.forEach( ( element ) => {
 
-               let tag=`<div class ='recipe-container' >
+               let tag=`<div class ='recipe-container'>
 
-                            <div class ='right' >
+                            <div style = 'background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
+                                                            url("${element.strMealThumb}") no-repeat center top;
+                                                            background-size: cover;' class ='m-display' >
 
                                 <span class='r-title' >${element.strMeal}</span> <br>
 
-                                <img src = '${element.strMealThumb}' alt ='${element.strMeal}'/>
-
-                                <button class='m-view-recipe' onclick='viewDetails( ${ JSON.stringify( element ) } )' > View Recipe </button>
+                                <button class='m-view-recipe' onclick='viewDetails( ${ JSON.stringify( element ) } )' > View Recipe >> </button>
                                 
                             </div>
 
                             <div class ='left' >
 
-                                <span class='r-title' >${element.strMeal}</span> <br>
-                                
-                                <span class='r-title r-size' >Recipe </span>
+                                <div class = 'r-value'>
+                                    
+                                    <span class='r-title' > ${element.strMeal} </span>
+                                    
+                                    <div> 
+                                        <p> ${element.strInstructions} </p>  
+                                        <button class='m-view-recipe' onclick='viewDetails( ${ JSON.stringify( element ) } )' > View Details >> </button>
+                                    </div> 
 
-                                <p  class='p-value'>
-                                    ${element.strInstructions}
-                                </p>
+                                    <span class='u-tube' >
+                                        Check our YouTube Channel
+                                        <a href = '${element.strYoutube}' >GreatRecipe@${element.strMeal}</a>
+                                        and dont forget to click the subscribe button 
+                                    </span>
+
+                                </div>
 
                             </div>
                             
@@ -120,7 +131,8 @@ window.onload = function() {
     Handle the way you display all details and recipe
 **/ 
 var viewDetails = function( meal_data ) {
-   alert( meal_data.strInstructions ); // TODO
+   window.localStorage.setItem( "meal_data", JSON.stringify( meal_data ) );
+   window.location.href = 'mealdetail.html';
 }
 
 
